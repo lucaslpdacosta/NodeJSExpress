@@ -5,14 +5,15 @@
  */
 
 var app = require('../app');//Aqui chamamos o modulo local
-var debug = require('debug')('workshop:server');//Serve para imprimir info
+var debug = require('debug')('nodejsexpress:server');//Serve para imprimir info
 var http = require('http');
+global.db = require('..//db');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');//Definição da Porta que s
+var port = normalizePort(process.env.PORT || '3000');//Definição da Porta
 app.set('port', port);
 
 /**
